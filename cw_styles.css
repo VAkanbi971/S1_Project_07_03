@@ -5,8 +5,8 @@
    Tutorial 5
    Case Problem 3
    
-   Author:   
-   Date:      
+   Author:   Victor Akanbi
+   Date:     11.30.18
    
    Filename: cw_styles.css
 
@@ -17,21 +17,31 @@
 
 
 /* Import Basic Design Styles  */
-
-
+@import url("cw_designs.css");
 
 /* ===============================
 	General Styles for All Devices
    ===============================
 */
+nav#bottom {
+    display: -webkit-display-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
 
+nav#bottom ul {
+    -webkit-flex: 0 1 150px;
+    flex: 0 1 150px;
+}
 
 
 /* ===============================
 	Mobile Styles up to 480 pixels
    ===============================
 */
-	
+
 
 
 
@@ -39,4 +49,3 @@
 	Tablet and Desktop Devices: 481px or more 
    ============================================
 */
-
