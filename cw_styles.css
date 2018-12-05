@@ -24,16 +24,17 @@
    ===============================
 */
 nav#bottom {
-    display: -webkit-display-flex;
+    display: -webkit-flex;
     display: flex;
     -webkit-flex-flow: row nowrap;
     flex-flow: row nowrap;
+    -webkit-justify-content: center;
     justify-content: center;
 }
 
 nav#bottom ul {
-    -webkit-flex: 0 1 150px;
-    flex: 0 1 150px;
+    -webkit-flex: 1 1 150px;
+    flex: 1 1 150px;
 }
 
 
@@ -41,11 +42,142 @@ nav#bottom ul {
 	Mobile Styles up to 480 pixels
    ===============================
 */
+@media only screen and (max-width: 480px) {
+    body {
+        color: rgb(211, 211, 211);
+        background-color: rgb(51, 51, 51)
+    }
 
+    aside,
+    article img,
+    section#spotlight {
+        display: none;
+    }
 
+    nav#top ul {
+        list-style-type: none;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+    }
 
+    nav#top ul li {
+        font-size: 2.2em;
+        -webkit-flex: 1 1 130px;
+        flex: 1 1 130px;
+    }
 
+    nav#top ul li:nth-of-type(1) {
+        background-image: url(cw_image01.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        width: 100%;
+    }
+
+    nav#top ul li:nth-of-type(2) {
+        background: url(cw_image02.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        width: 100%;
+    }
+
+    nav#top ul li:nth-of-type(3) {
+        background: url(cw_image03.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        width: 100%;
+    }
+
+    nav#top ul li:nth-of-type(4) {
+        background: url(cw_image04.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        width: 100%;
+    }
+
+    nav#top ul li:nth-of-type(5) {
+        background: url(cw_image05.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        width: 100%;
+    }
+
+    nav#top ul li:nth-of-type(6) {
+        background: url(cw_image06.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        width: 100%;
+    }
+
+    p#links {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -webkit-justify-content: space-around;
+        justify-content: space-around;
+    }
+
+    p#links a {
+        color: white;
+        background-color: rgb(220, 27, 27);
+        border-radius: 20px;
+        padding: 10px;
+        text-decoration: none;
+
+    }
+}
+
+/*  
+ The page body has four children: the header, the footer, the article element, and the aside element. The article and aside elements will share a row with more space given to the article element. Set the growth, shrink, and basis values of the article element to 2, 1, and 400 pixels. Set those same values for the aside element to 1, 2, and 200 pixels.
+ */
 /* ============================================
 	Tablet and Desktop Devices: 481px or more 
    ============================================
 */
+@media only screen and (min-width: 481px) {
+    body {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+    }
+
+    article {
+        -webkit-flex: 2 1 400px;
+        flex: 2 1 400px;
+    }
+
+    aside {
+        -webkit-flex: 1 2 200px;
+        flex: 1 2 200px;
+    }
+
+    nav#top ul {
+        list-style-type: none;
+        display: -webkit-flex;
+        display: flex;
+        background-color: rgb(51, 51, 51);
+        height: 50px;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    nav#top ul li {
+        -webkit-flex: 0 1 80px;
+        flex: 0 1 80px;
+    }
+
+    p#links {
+        display: none;
+    }
+}
