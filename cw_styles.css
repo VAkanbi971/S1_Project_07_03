@@ -23,6 +23,7 @@
 	General Styles for All Devices
    ===============================
 */
+/* General styles that apply to all versions of the website. Displays everything in the nav with id of bottom as a flex box so that it can be eaily ajdusted later when specifying the styles for mobile and desktop. It is in a row and doest allow for a wrap as well as the content being centered. Flex just alows the element to grow or shrink based on the specification and it wont grow past the basis (basicly a limiter.) */
 nav#bottom {
     display: -webkit-flex;
     display: flex;
@@ -42,6 +43,7 @@ nav#bottom ul {
 	Mobile Styles up to 480 pixels
    ===============================
 */
+/* This section of code contains styles that only apply when a certain amount of pixels are reached. This section has code for text color, background color, and flex boxes.*/
 @media only screen and (max-width: 480px) {
     body {
         color: rgb(211, 211, 211);
@@ -135,9 +137,8 @@ nav#bottom ul {
     }
 }
 
-/*  
- The page body has four children: the header, the footer, the article element, and the aside element. The article and aside elements will share a row with more space given to the article element. Set the growth, shrink, and basis values of the article element to 2, 1, and 400 pixels. Set those same values for the aside element to 1, 2, and 200 pixels.
- */
+
+/* This section makes only the desktop or tablet mode have these styles. These styles contain flex boxes, changes the sizes, growth rate, and shrink rate of the boxes. This centers the top nav as well as changes its color and making the telephone and email link not be visible. */
 /* ============================================
 	Tablet and Desktop Devices: 481px or more 
    ============================================
